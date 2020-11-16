@@ -6,6 +6,9 @@ class Guest:
         self.favourite_song = favourite_song
         self.cash = cash 
 
+    def guest_can_afford(self, amount):
+        return self.cash >= amount
+
     def can_buy_drink(self, guest_to_check):
         if guest_to_check.age >= 18:
             return "Yas Kween, get krunk"

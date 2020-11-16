@@ -25,7 +25,14 @@ class TestGuest(unittest.TestCase):
     def test_guest_has_money(self):
         self.assertEqual(100, self.guest_1.cash)
 
-    def test_guest_can_buy_drink(self):
+
+    def test_guest_can_afford__True(self):
+        self.assertEqual(True, self.guest_1.guest_can_afford(10))
+
+    def test_guest_can_afford__False(self):
+        self.assertEqual(False, self.guest_1.guest_can_afford(1000))
+    
+    def test_guest_can_buy_drink__True(self):
         self.assertEqual("Yas Kween, get krunk", self.guest_1.can_buy_drink(self.guest_1))
 
     def test_reduce_wallet(self):

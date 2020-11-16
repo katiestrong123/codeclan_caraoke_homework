@@ -26,3 +26,7 @@ class Room:
     def increase_till(self, amount):
         self.till += amount
         return self.till
+
+    # def take_room_charge(self, guest_paying, room_charge):
+    #     self.increase_till(rooom_charge)
+    #     guest.guest_paying.reduce_wallet(rooom_charge)

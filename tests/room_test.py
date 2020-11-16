@@ -48,6 +48,10 @@ class TestRoom(unittest.TestCase):
         self.room.add_guest_to_room(self.guest_4)
         self.assertEqual("Sorry mate, we're at capacity", self.room.add_guest_to_room(self.guest_4))
 
-    def tease_can_increase_till(self):
+    def test_can_increase_till(self):
         self.assertEqual(1010, self.room.increase_till(10))
-    
+
+    # def test_can_pay_room_charge(self):
+    #     # self.room.increase_till(self.guest_1, 10)
+    #     self.assertEqual(40, guest.guest_1.reduce_wallet(10))
+    #     self.assertEqual(1010, self.take_room_charge(10))
